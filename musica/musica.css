@@ -246,6 +246,7 @@ header {
 
 .disco h2 {
   color: #b70e21;
+  text-decoration-line: underline overline;
   padding-bottom: 0.5em;
 }
 
