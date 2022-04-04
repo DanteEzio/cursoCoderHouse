@@ -1,0 +1,472 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+
+/* ********************************* HEADER ************************************** */
+header {
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.container-header {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-logo {
+  background-color: black;
+  padding: 0.5rem;
+}
+
+.container-logo a {
+  text-decoration: none;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 4rem;
+}
+
+.titulo_logo p {
+  color: white;
+  font-size: 16px;
+  padding-left: 0.5rem;
+}
+
+/* Aquí alineamos los iconos con el nav */
+.container-LI {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iconosRedes a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_icono {
+  padding: 0 0rem 0 0.3rem;
+  text-decoration: none;
+}
+
+/* Aquí empieza nuestro navbar */
+
+.main-header {
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  padding: 0 0.4rem;
+}
+
+.main-logo {
+  color: black;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  margin-left: -100%;
+  transition: all 0.2s linear;
+  background-color: rgba(182, 181, 122, 0.726);
+  z-index: 100;
+}
+
+.main-nav.show {
+  margin-left: 0;
+}
+
+.nav-links {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.nav_item {
+  display: flex;
+}
+
+.link-item {
+  margin-top: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.link-item::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  transition: 0.3s ease all;
+}
+
+.link-item:hover::after {
+  width: 100%;
+}
+
+.button-menu {
+  z-index: 200;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  background: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button-menu span {
+  width: 37px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: all 0.2s linear;
+}
+
+.button-menu.close span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, 0px);
+  background: white;
+}
+
+.button-menu.close span:nth-child(2) {
+  transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+.button-menu.close span:nth-child(3) {
+  display: none;
+}
+
+/* --------------------------------- Rayita de mi navbar ----------------------------- */
+.main-nav a,
+.main-nav a:focus {
+  white-space: nowrap;
+  transition: 0.3s;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;
+}
+
+.main-nav > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.main-nav a:hover:before,
+.main-nav li:hover > a:before,
+.main-nav .active:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* ---------------------------------- Aqui termina la rayita ----------------------- */
+
+/* ********************************* MAIN ************************************** */
+main {
+  color: white;
+}
+
+.container-main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.portada {
+  margin: 0;
+  padding: 2px 0 0 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.portada img {
+  width: 100%;
+}
+
+.principal-main {
+  padding: 1rem 0;
+}
+
+.u-noticias h3 {
+  text-decoration-line: underline overline;
+  text-align: center;
+}
+
+.noticias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+}
+
+.noticias img {
+  width: 230px;
+  height: 230px;
+  filter: brightness(30%);
+  border: 1px solid;
+}
+
+.contenedor-noticia {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.texto-encima {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+
+.album {
+  padding: 1rem 0;
+}
+
+.album h3 {
+  text-decoration-line: underline overline;
+  text-align: center;
+}
+
+.imagen-album {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen-album img {
+  width: 40%;
+  border-radius: 0.5em;
+}
+
+/* ********************************* FOOTER ************************************** */
+footer {
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer1 {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.redes-footer {
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.redes-footer a {
+  color: white;
+  padding: 0 0 0 0.5rem;
+}
+
+.footer2 {
+  text-align: center;
+  padding-top: 0.8rem;
+}
+/* ********************************* MEDIA-QUERIES ************************************** */
+
+/* MEDIA QUERYES */
+
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+
+  .main-logo {
+    flex-basis: 30%;
+  }
+
+  .main-nav {
+    position: static;
+    margin-left: 0;
+    flex-basis: 100%;
+    height: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: black;
+  }
+
+  .link-item {
+    display: flex;
+    margin-top: 0;
+    margin-right: 2rem;
+  }
+
+  /* main-portada */
+  .portada img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .contenedor-noticia {
+    padding-top: 0rem;
+  }
+
+  .contenedor-noticia img {
+    width: 350px;
+    height: 300px;
+  }
+
+  .noticias {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .u-noticias h3 {
+    font-size: 25px;
+  }
+
+  .texto-encima {
+    font-size: 20px;
+  }
+
+  .album h3 {
+    font-size: 25px;
+  }
+
+  .imagen-album h5 {
+    font-size: 20px;
+  }
+
+  .footer2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .portada img {
+    width: 100%;
+    height: 450px;
+    filter: brightness(80%);
+  }
+
+  /* .portada img:hover {
+    filter: grayscale(40%);
+  } */
+
+  .contenedor-noticia img {
+    width: 450px;
+    height: 400px;
+  }
+
+  .contenedor-noticia img:hover {
+    filter: grayscale(80%);
+  }
+
+  /* Otros efectos interesantes */
+  /* .contenedor-noticia:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  .contenedor-noticia {
+    overflow: hidden;
+  } */
+
+  /* img:hover {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  } */
+
+  .noticias {
+    padding: 1rem 0;
+    gap: 2rem;
+  }
+
+  .u-noticias h3 {
+    font-size: 35px;
+  }
+
+  .texto-encima {
+    font-size: 25px;
+  }
+
+  .imagen-album img {
+    width: 450px;
+    height: 400px;
+  }
+
+  .album h3 {
+    font-size: 35px;
+  }
+
+  .imagen-album h5 {
+    font-size: 25px;
+  }
+
+  .footer2 {
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+}
