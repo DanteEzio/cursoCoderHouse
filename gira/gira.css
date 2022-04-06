@@ -228,10 +228,15 @@ main {
 
 .titulo-gira h3 {
   text-decoration-line: underline overline;
+  font-size: 28px;
 }
 
 .logo2 {
   padding-top: 1em;
+}
+
+.logo2 img{
+  width: 35%;
 }
 
 .header-gira {
@@ -337,6 +342,14 @@ footer {
     font-size: 22px;
   }
 
+  .titulo-gira h3{
+    font-size: 35px;
+  }
+
+  .logo2 img{
+    width: 20%;
+  }
+
   .info {
     display: flex;
     align-items: center;
@@ -347,7 +360,7 @@ footer {
   .lugar,
   .boton {
     width: 25%;
-    font-size: 15px;
+    font-size: 20px;
   }
 
   /*  FOOTER */
@@ -377,6 +390,18 @@ footer {
 
   /* MAIN */
   .titulo-gira {
+    font-size: 25px;
+  }
+
+  .logo2 img{
+    width: 15%;
+  }
+
+  .header-gira p{
+    font-size: 30px;
+  }
+
+  .espacio {
     font-size: 25px;
   }
 

@@ -466,19 +466,23 @@ footer {
   }
 
   .u-noticias h3 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .texto-encima {
-    font-size: 20px;
-  }
-
-  .album h3 {
     font-size: 25px;
   }
 
+  .imagen-album img{
+    width: 40%;
+  }
+
+  .album h3 {
+    font-size: 30px;
+  }
+
   .album h5{
-    font-size: 20px;
+    font-size: 25px;
   }
 
 
@@ -536,7 +540,7 @@ footer {
   }
 
   .texto-encima {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .imagen-album img {
