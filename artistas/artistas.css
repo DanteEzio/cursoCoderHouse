@@ -398,6 +398,10 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+  .definicion{
+    width: 80%;
+    margin: 0 auto;
+  }
 
   .imagen-indie img{
     width: 20%;
