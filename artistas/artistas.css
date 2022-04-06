@@ -230,6 +230,7 @@ main {
 
 .titulo-def {
   text-align: center;
+  font-size: 45px;
 }
 .titulo-def span {
   color: #b70e21;
@@ -244,10 +245,15 @@ main {
   padding-top: 1em;
   text-align: center;
   text-decoration-line: underline overline;
+  font-size: 40px;
 }
 
 .imagen-indie {
   text-align: center;
+}
+
+.imagen-indie img{
+  width: 35%;
 }
 
 .artistas {
@@ -258,8 +264,8 @@ main {
 }
 
 .artistas img {
-  width: 230px;
-  height: 230px;
+  width: 300px;
+  height: 300px;
   filter: brightness(20%);
   border: 1px solid;
 }
@@ -268,20 +274,20 @@ main {
   position: relative;
   display: inline-block;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 3rem;
 }
 
 .artistas h5 {
-  font-size: 20px;
+  font-size: 30px;
   color: #b70e21;
 }
 
 .texto-encima {
   position: absolute;
-  top: 50%;
+  top: 61%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -345,20 +351,32 @@ footer {
   }
 
   /* MAIN */
+.definicion{
+  font-size: 20px;
+}
+
+  .imagen-indie img{
+    width: 30%;
+  }
 
   .artista img {
-    width: 350px;
-    height: 300px;
+    width: 340px;
+    height: 340px;
   }
 
   .artista h5 {
     text-decoration-line: underline overline;
     padding-bottom: 0.5em;
+    font-size: 30px;
   }
 
-  .artista h6 {
-    font-size: 15px;
-    padding-top: 3em;
+  .texto-encima {
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    text-align: center;
   }
 
   .artistas {
@@ -379,11 +397,21 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+
+  .imagen-indie img{
+    width: 20%;
+  }
+
   .artistas {
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: center;
     gap: 1rem;
+  }
+
+  .artista img {
+    width: 320px;
+    height: 320px;
   }
 
   .artistas .artista {
