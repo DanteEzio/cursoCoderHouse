@@ -218,9 +218,8 @@ header {
 /* ********************************* MAIN ************************************** */
 
 .container-main {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 95%;
+  margin: 0 auto;
   padding: 1.5rem;
 }
 
@@ -251,7 +250,7 @@ header {
   padding: 2em 0;
 }
 
-.contact-form form p {
+.contact-form * {
   margin: 0;
   padding: 1em;
 }
@@ -371,6 +370,11 @@ footer {
     padding: 3em;
   } */
 
+  .container-main{
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .contact-form form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -388,6 +392,12 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+  .container-main{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+
   .contact-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
